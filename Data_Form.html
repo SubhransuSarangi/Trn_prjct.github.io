@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Passenger details</title>
+
+    <script>
+        function validate()
+        {
+            let x = document.forms["regform"]["name"].value;
+            if (x == "")
+            {
+                alert("Name must be filled out");
+                return false;
+            }
+            x = document.forms["regform"]["email"].value;
+            if (x == "")
+            {
+                alert("Email must be filled out");
+                return false;
+            }
+            x = document.forms["regform"]["mobile"].value;
+            if (x == "")
+            {
+                alert("Mobile no must be filled out");
+                return false;
+            }
+            x = document.forms["regform"]["pnr_no"].value;
+            if (x == "")
+            {
+                alert("PNR must be filled out");
+                return false;
+            }
+            x = document.forms["regform"]["location"].value;
+            if (x == "select")
+            {
+                alert("Please select your location");
+                return false;
+            }
+        }
+    </script>
+
+    <style>
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body,
+        div,
+        form,
+        input,
+        select,
+        p {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 16px;
+            color: white;
+        }
+
+        body {
+            background: url("home_page.jpg") no-repeat center;
+            background-size: cover;
+        }
+
+        header {
+            background: rgb(3, 1, 39);
+            padding: 25px;
+            text-align: center;
+            color: white
+        }
+
+        div.logo {
+            position: absolute;
+            left: 40px;
+            top: 10px;
+            font-size: 25px;
+            font-style: italic;
+            text-shadow: 7px 4px 5px rgb(240, 11, 11);
+            color: rgb(45, 220, 185)
+        }
+
+        .home {
+            position: absolute;
+            left: 80rem;
+            top: 14px;
+        }
+
+        .logout {
+            position: absolute;
+            left: 87.5rem;
+            top: 14px;
+        }
+
+        .help {
+            position: absolute;
+            left: 84rem;
+            top: 14px;
+        }
+
+        #userlogo {
+            display: flex;
+            position: absolute;
+            left: 92rem;
+            top: 10px;
+            font-size: 30px;
+        }
+
+        #sitelogo {
+            display: flex;
+            position: absolute;
+            left: 5px;
+            top: 11px;
+            font-size: 27px;
+            text-shadow: 7px 4px 5px rgb(242, 8, 8);
+            color: rgb(225, 244, 12)
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: 400;
+            margin: 0 0 0 8px;
+        }
+
+        .main-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding-left: 27rem;
+            padding-right: 27rem;
+            padding-top: 1.5rem;
+            background: rgba(0, 0, 0, 0.5);
+
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 25px;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 5px;
+            margin-bottom: 30px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+
+        select
+        {
+            display: flex;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid #eee;
+            background: rgba(0, 0, 0, 0.7);
+            width: 400px;
+            height: 25px;
+        }
+
+        textarea {
+            background: transparent;
+            color: white;
+        }
+
+        .checkbox {
+            padding-top: 10px;
+        }
+
+        .checkbox input {
+            margin: 0 10px 0 0;
+            vertical-align: middle;
+        }
+
+        .checkbox a {
+            color: #26a9e0;
+        }
+
+        .checkbox a:hover {
+            color: #85d6de;
+        }
+
+        button {
+            padding: 10px 5px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: none;
+            background: #26a9e0;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            cursor: grab;
+        }
+
+        button:hover {
+            background: #85d6de;
+        }
+
+        @media (min-width: 568px)
+        {
+
+            html,body
+            {
+                height: 100%;
+            }
+
+            .main-block
+            {
+                flex-direction: row;
+                height: calc(100% - 50px);
+            }
+
+            form
+            {
+                flex: 1;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <i id="sitelogo" class="fa fa-truck"></i>
+        <div class="logo">Fast delivery</div>
+        <div class="home"><a href="#">Home</a></div>
+        <div class="logout"><a href="#">Sign out</a></div>
+        <div class="help"><a href="#">Help</a></div>
+        <i id="userlogo" class="fa fa-user-circle-o"></i>
+    </header>
+    <div class="main-block">
+
+        <form name="regform" action="#" method="post" onsubmit="return validate()">
+            <div class="title">
+                <i class="fas fa-pencil-alt"></i>
+                <h2>Passenger Details</h2>
+            </div>
+            <div class="info">
+                <input class="fname" type="text" name="name" placeholder="Enter your Name">
+                <input type="email" name="email" placeholder="Enter your Email">
+                <input type="tel" name="mobile" placeholder="Enter your Phone number">
+                <input type="text" name="pnr_no" placeholder="Enter your PNR no.">
+                <table>
+                    <tr>
+                        <td>Select your location : </td>
+                        <td>
+                            <select name="location">
+                                <option>select</option>
+                                <option>CUTTACK</option>
+                                <option>BHUBANESWAR</option>
+                                <option>KEONJHAR</option>
+                                <option>SAMBALPUR</option>
+                                <option>PURI</option>
+                                <option>BALESWAR</option>
+                            </select>
+                        </td>
+                    </tr>
+             </table>
+                <textarea name="textarea" placeholder="If Any Query, Type here.............." rows="6"></textarea>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox"><span>I agree to the <a href="#">Privacy Poalicy</a></span>
+            </div>
+            <button type="submit" href="/">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

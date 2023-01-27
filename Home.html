@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Home page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: url("home_page.jpg") no-repeat center;
+            background-size: cover;
+        }
+
+        header {
+            background: rgb(3, 1, 39);
+            padding: 30px;
+            text-align: center;
+            color: white
+        }
+
+        div.logo {
+            position: absolute;
+            left: 40px;
+            top: 15px;
+            font-size: 25px;
+            font-style: italic;
+            text-shadow: 7px 4px 5px rgb(244, 6, 6);
+            color: rgb(45, 220, 185)
+        }
+
+        .home {
+            position: absolute;
+            left: 67.5rem;
+            top: 21px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .achivement {
+            position: absolute;
+            left: 72.5rem;
+            top: 21px;
+            width: 50px;
+        }
+
+        .status {
+            position: absolute;
+            left: 81rem;
+            top: 21px;
+        }
+
+        .signin {
+            position: absolute;
+            left: 87rem;
+            top: 21px;
+        }
+
+        .signup {
+            position: absolute;
+            left: 92rem;
+            top: 21px;
+        }
+
+        #sitelogo {
+            display: flex;
+            position: absolute;
+            left: 5px;
+            top: 17px;
+            font-size: 24px;
+            text-shadow: 7px 4px 5px rgb(242, 8, 8);
+            color: rgb(225, 244, 12)
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: rgb(3, 1, 39);
+        }
+
+        footer .content {
+            max-width: 1350px;
+            margin: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        footer .content p,
+        a {
+            color: #fff;
+        }
+
+        footer .content .box {
+            width: 33%;
+            transition: all 0.4s ease;
+        }
+
+        footer .content .topic {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+
+        }
+
+        footer .content p {
+            text-align: justify;
+        }
+
+        footer .content .lower .topic {
+            margin: 24px 0 5px 0;
+        }
+
+        footer .content .lower i {
+            padding-right: 16px;
+        }
+
+        footer .content .middle {
+            padding-left: 80px;
+        }
+
+        footer .content .middle a {
+            line-height: 32px;
+        }
+
+        footer .content .right input[type="text"] {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            color: #d9d9d9;
+            background: #000;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 17px;
+            border: none;
+            border-bottom: 1px solid #eee;
+        }
+
+        footer .content .right input[type="submit"] {
+            height: 42px;
+            width: 100%;
+            font-size: 18px;
+            color: #d9d9d9;
+            background: #eb2f06;
+            outline: none;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 12px;
+            border: 2px solid #eb2f06;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .content .right input[type="submit"]:hover {
+            background: none;
+            color: #eb2f06;
+        }
+
+        footer .content .media-icons a {
+            font-size: 16px;
+            height: 45px;
+            width: 45px;
+            display: inline-block;
+            text-align: center;
+            line-height: 43px;
+            border-radius: 5px;
+            border: 2px solid #222222;
+            margin: 30px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .content .media-icons a:hover {
+            border-color: #eb2f06;
+        }
+
+        footer .bottom {
+            width: 100%;
+            text-align: center;
+            color: #d9d9d9;
+            padding: 0 40px 10px 0;
+        }
+
+        footer .bottom a {
+            color: #eb2f06;
+        }
+
+        footer a {
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #eb2f06;
+        }
+
+        @media (max-width:1100px) {
+            footer .content .middle {
+                padding-left: 50px;
+            }
+        }
+
+        @media (max-width:950px) {
+            footer .content .box {
+                width: 50%;
+            }
+
+            .content .right {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width:560px) {
+            footer {
+                position: relative;
+            }
+
+            footer .content .box {
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            footer .content .middle {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <i id="sitelogo" class="fa fa-truck"></i>
+        <div class="logo">Fast delivery</div>
+        <div class="home"><a href="#">Home</a></div>
+        <div class="achivement"><a href="#">Achivement</a></div>
+        <div class="status"><a href="Data_Form.html">Status</a></div>
+        <div class="signup"><a href="#">Sign up</a></div>
+        <div class="signin"><a href="#">Sign in</a></div>
+    </header>
+
+    <footer>
+        <div class="content">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>It is a platform, where you order your necessary medicine inside the train</p>
+                </div>
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>+919437987032</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>subhransusarangihappy@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="middle box">
+                <div class="topic">Our Services</div>
+                <div><a href="#">Deliver inside train</a></div>
+                <div><a href="#">Quick delivery</a></div>
+                <div><a href="#">No delay</a></div>
+                <div><a href="#">We care your health</a></div>
+            </div>
+            <div class="right box">
+                <div class="topic">Subscribe us</div>
+                <form action="#">
+                    <input type="text" placeholder="Enter email address">
+                    <input type="submit" name="" value="Submit">
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Copyright © 2022 <a href="#">Delivery anytime</a> All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
